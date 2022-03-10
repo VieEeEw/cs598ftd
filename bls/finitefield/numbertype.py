@@ -18,8 +18,8 @@ def memoize(f):
 def typecheck(f):
     def newF(self, other):
         if (
-            hasattr(other.__class__, "operatorPrecedence")
-            and other.__class__.operatorPrecedence > self.__class__.operatorPrecedence
+                hasattr(other.__class__, "operatorPrecedence")
+                and other.__class__.operatorPrecedence > self.__class__.operatorPrecedence
         ):
             return NotImplemented
 

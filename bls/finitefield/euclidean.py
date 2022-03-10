@@ -18,10 +18,10 @@ def gcd(a, b):
 def extendedEuclideanAlgorithm(a, b):
     if abs(b) > abs(a):
         (x, y, d) = extendedEuclideanAlgorithm(b, a)
-        return (y, x, d)
+        return y, x, d
 
     if abs(b) == 0:
-        return (1, 0, a)
+        return 1, 0, a
 
     x1, x2, y1, y2 = 0, 1, 1, 0
     while abs(b) > 0:
@@ -30,4 +30,4 @@ def extendedEuclideanAlgorithm(a, b):
         y = y2 - q * y1
         a, b, x2, x1, y2, y1 = b, r, x1, x, y1, y
 
-    return (x2, y2, a)
+    return x2, y2, a
