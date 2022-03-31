@@ -1,6 +1,7 @@
 import hashlib
 import math
 
+
 def hash(x):
     assert isinstance(x, (str, bytes))
     try:
@@ -9,4 +10,6 @@ def hash(x):
         pass
     return hashlib.sha256(x).digest()
 
-def ceil(x): return int(math.ceil(x))
+
+def ceil(x):
+    return int(math.ceil(x))
